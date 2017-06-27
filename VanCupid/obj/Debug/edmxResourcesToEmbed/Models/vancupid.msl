@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vancupidModelStoreContainer" CdmEntityContainer="vancupidEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="vancupidModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Interests" ColumnName="Interests" />
+          <ScalarProperty Name="Photo1" ColumnName="Photo1" />
+          <ScalarProperty Name="Photo2" ColumnName="Photo2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

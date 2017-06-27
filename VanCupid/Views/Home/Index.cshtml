@@ -1,0 +1,32 @@
+﻿@model VanCupid.Models.SearchLocation
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>VanCupid</h1>
+    <p class="initialsentence">Yes, you can find your soulmate in Vancouver!</p>
+
+</div>
+
+@using (Html.BeginForm("UserList", "Home", FormMethod.Post))
+{
+    <div class="row">
+
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-md-4">
+            <h4>&nbsp;Location</h4>
+            @Html.TextBoxFor(model => model.Location, new { @class = "form-control indexhome", placeholder = "Downtown" })
+            <label class="labelcolor">&nbsp;Search for location.</label>
+        </div>
+        
+        <div class="col-md-2">
+            <input type="submit" value="Find your soulmate!" class="btn btn-default btn-login" />
+        </div>
+
+        <div class="col-md-3">
+        </div>
+    </div>
+}

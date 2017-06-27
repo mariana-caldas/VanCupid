@@ -1,0 +1,43 @@
+﻿@model VanCupid.Models.Login
+@{
+    ViewBag.Title = "UserLogin";
+}
+
+<div class="logintext">
+    <h4>Sign in to check all the profiles considering your previous search.</h4>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">User Login</h3>
+                </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @ViewBag.MessageErrorLogin
+                        <fieldset>
+                            @*<div class="form-group">
+                                @Html.TextBoxFor(model => model.UserID, new { @class = "form-control", placeholder = "yourmail@example.com" })
+                            </div>*@
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "yourmail@example.com" })
+                            </div>
+                            <div class="form-group">
+                                @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "password" })
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Login" class="btn btn-lg btn-block btn-default" />
+                            </div>
+                        </fieldset>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="member">
+    <a href="@Url.Action("Create", "Users")" class="logintext"><p>Not a member? Create an account free.</p></a>
+</div>

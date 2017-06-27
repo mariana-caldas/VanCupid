@@ -1,0 +1,51 @@
+﻿@model IEnumerable<VanCupid.Models.User>
+
+<h2>User List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo2)
+        </th>
+        <th>
+            &nbsp;
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interests)
+            </td>
+            <td>
+                <img src="~/Uploads/@Html.DisplayFor(modelItem => item.Photo1)" alt="" class="img-small" />
+            </td>
+            <td>
+                <img src="~/Uploads/@Html.DisplayFor(modelItem => item.Photo2)" alt="" class="img-small" />
+            </td>
+            <td>
+                @Html.ActionLink("Send an Email", "SendEmail", new { UserID = item.UserID })
+            </td>
+        </tr>
+    }
+
+</table>
