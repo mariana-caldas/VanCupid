@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using VanCupid.Models;
+using VanCupid.Library;
 using System.Net.Mail;
 using System.IO;
 using System.Threading.Tasks;
@@ -83,7 +84,7 @@ namespace VanCupid.Controllers
 
             return View();
         }
-        
+
 
         public ActionResult Logout()
         {
@@ -103,31 +104,15 @@ namespace VanCupid.Controllers
         [HttpPost]
         public async Task<ActionResult> SendEmail(SendEmail form)
         {
-                var userToNotify = db.Users.Where(u => u.UserID==form.UserID).FirstOrDefault();
+            var userToNotify = db.Users.Where(u => u.UserID == form.UserID).FirstOrDefault();
 
-                //Email                     
-                 var body = form.Message;                     
-                 var message = new MailMessage();                     
-                 message.To.Add(new MailAddress(userToNotify.Email));  
-                // replace with valid value                      
-                message.From = new MailAddress("vancupid@hotmail.com");  
-                // replace with valid value                     
-                message.Subject = form.Subject;                     
-                message.Body = string.Format(body, "VanCupid", "no-reply@vancupid.com", "You've received a message.");                     
-                message.IsBodyHtml = true;                     
-                using (var smtp = new SmtpClient())
-                {                         
-            var credential = new NetworkCredential{
-                UserName = "vancupid@hotmail.com",  // replace with valid value                             
-                 Password = "777777Vc"  // replace with valid value                         
-                  };                         
-                    smtp.Credentials = credential;                         
-                smtp.Host = "smtp-mail.outlook.com";                         
-                smtp.Port = 587;                         
-                smtp.EnableSsl = true;                         
-                    await smtp.SendMailAsync(message);                     
-}
-                ViewBag.Message = "Message sent!";
+            //Email
+            var email = new Email(userToNotify.Email);
+            email.SetMessage(form.Message);
+            email.SetSubject(form.Subject);
+            await email.Send();
+
+            ViewBag.Message = "Message sent!";
             return View();
         }
 

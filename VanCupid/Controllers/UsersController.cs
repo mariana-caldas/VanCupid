@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using VanCupid.Models;
+using VanCupid.Library;
 using System.Net.Mail;
 using System.IO;
 using System.Threading.Tasks;
@@ -99,29 +100,14 @@ namespace VanCupid.Controllers
                 db.SaveChanges();
                 
             }
-            
-            //Email
-            var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
-            var message = new MailMessage();
-            message.To.Add(new MailAddress(user.Email));  // replace with valid value 
-            message.From = new MailAddress("vancupid@hotmail.com");  // replace with valid value
-            message.Subject = "Welcome to VanCupid!";
-            message.Body = string.Format(body, "Vancupid", "no-reply@vancupid.com", "Registration completed.");
-            message.IsBodyHtml = true;
 
-            using (var smtp = new SmtpClient())
-            {
-                var credential = new NetworkCredential
-                {
-                    UserName = "vancupid@hotmail.com",  // replace with valid value
-                    Password = "777777Vc"  // replace with valid value
-                };
-                smtp.Credentials = credential;
-                smtp.Host = "smtp-mail.outlook.com";
-                smtp.Port = 587;
-                smtp.EnableSsl = true;
-                await smtp.SendMailAsync(message);
-            }
+            //Email
+
+            var email = new Email(user.Email);
+            email.SetMessage("<p>Email From: Vancupid (no-reply@vancupid.com)</p><p>Message:</p><p>Registration completed.</p>");
+            email.SetSubject("Welcome to VanCupid!");
+            await email.Send();
+
             return RedirectToAction("Index", "Home");
         }
 

@@ -7,6 +7,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>VanCupid.Models.vancupidEntities</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
