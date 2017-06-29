@@ -9,6 +9,9 @@ This is the Index page of the project:
 
 Follow the next instructions to create a Asp.Net project like this, using MVC5 and Data First.
 
-### Creating the Asp.Net project with MVC without Authentication:
+#### Creating the Asp.Net project with MVC without Authentication:
 
-![Project Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/...)
+![Step 1 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/NewProject.PNG)
+
+![Step 2 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/NoAuthentication.PNG)
+
