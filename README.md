@@ -29,3 +29,38 @@ Copy the bootstrap.css content file to a new css file in your project. Notice th
 
 ![Step 5 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/BootswatchContent.PNG)
 ![Step 6 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/Bundle.PNG)
+
+
+#### Creating your MDF file
+
+Now it is time to create your .mdf file and built your Database. In **App_Data**, right button to *Add* a *New Item*:
+
+![Step 7 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/mdf.PNG)
+
+
+#### Creating your EDMX file
+
+The .edmx file will allow you to create the Controllers you need for each Table you built for your Database. In **Models**, right button to *Add* a *New Item*:
+
+![Step 8 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/edmx1.PNG)
+
+![Step 9 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/edmx2.PNG)
+
+![Step 10 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/edmx3.PNG)
+
+![Step 11 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/edmx4.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
