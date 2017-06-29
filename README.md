@@ -13,7 +13,7 @@ Follow the next instructions to create a Asp.Net project like this, using MVC5 a
 
 ![Step 1 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/NewProject.PNG)
 
-![Step 2 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/NewProject.PNG)
+![Step 2 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/MVC.PNG)
 
 ![Step 3 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/NoAuthentication.PNG)
 
