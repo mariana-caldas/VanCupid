@@ -25,3 +25,7 @@ Go to Bootswatch website, https://bootswatch.com/ - automatic!, and choose a the
 
 ![Step 4 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/BootswatchPNG.PNG)
 
+Copy the bootstrap.css content file to a new css file in your project. Notice that I created I file called bootstrap-united.css inside Content. Finally, in BundleConfig, determine the css file that will style your layout.
+
+![Step 5 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/BootswatchContent.PNG)
+![Step 6 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/Bundle.PNG)
