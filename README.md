@@ -21,7 +21,7 @@ Follow the next instructions to create a Asp.Net project like this, using MVC5 a
 
 #### Choosing a theme for your layout on Bootswatch
 
-Go to Bootswatch website, https://bootswatch.com/ - automatic!, and choose a theme for layout. For this project, I chose *United*.
+Go to Bootswatch website, https://bootswatch.com/, and choose a theme for layout. For this project, I chose *United*.
 
 ![Step 4 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/BootswatchPNG.PNG)
 
