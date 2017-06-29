@@ -50,11 +50,16 @@ The .edmx file will allow you to create the Controllers you need for each Table 
 
 ![Step 11 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/edmx4.PNG)
 
+After you creat your .edmx file, built the Solution.
 
 
+#### Creating the Controllers for each Database Table 
 
+Now you have the .edmx file, you can create a Controller for each Table from your Database. In **Controllers**, right button to *Add* a *Controller*:
 
+![Step 12 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/controller1.PNG)
 
+![Step 13 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/controller2.PNG)
 
 
 
