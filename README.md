@@ -64,7 +64,7 @@ Now you have the .edmx file, you can create a Controller for each Table from you
 
 #### Creating Classes
 
-For this project, I created some classes inside **Models** and one inside a new folder, **Library**. To create a class, you just need to create a folder by right clicking on the Solution and adding a New Folder (as I dic with Library) or using an existing one like Models. Then, right click on the chosen folder to to *Add* a *Class*:
+For this project, I created some classes inside **Models** and one inside a new folder, **Library**. To create a class, you just need to create a folder by right clicking on the Solution and adding a New Folder (as I did with Library) or using an existing one like Models. Then, right click on the chosen folder to to *Add* a *Class*:
 
 ![Step 14 Image](https://github.com/MarianaSouza/VanCupid/blob/master/Documentation/class.PNG)
 
